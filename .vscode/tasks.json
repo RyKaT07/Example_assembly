@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build MSP430 ASM",
+            "type": "shell",
+            "command": "msp430-elf-as -o main.o main.s && msp430-elf-ld -o main.elf main.o",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

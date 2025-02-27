@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug MSP430",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.elf",
+            "miDebuggerPath": "/opt/msp430-gcc/bin/msp430-elf-gdb",
+            "setupCommands": [
+                {
+                    "description": "Wgrywanie pliku ELF",
+                    "text": "-file-exec-and-symbols ${workspaceFolder}/main.elf"
+                },
+                {
+                    "description": "Podłączenie do mspdebug",
+                    "text": "target remote :2000"
+                }
+            ]
+        }
+    ]
+}
